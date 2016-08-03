@@ -1,0 +1,105 @@
+Time : 23:03:37
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\' at line 12
+Raw SQL : SELECT a.pabx_id, a.pabx_type, a.pabx_site , d.sta_no,
+                                  			b.acc_pin, c.sys_set_value, e.opr_desc, b.acc_name , f.post_name, g.dept_name
+                                  FROM pabx a
+                                  INNER JOIN account b ON a.pabx_id = b.pabx_id
+                                  INNER JOIN station d ON b.acc_id = d.acc_id
+                                  INNER JOIN post f on b.post_id = f.post_id
+                                  INNER JOIN department g ON f.dept_id  = g.dept_id
+                                  JOIN operator e
+                                  JOIN system_calltype c
+                                  WHERE a.pabx_id = '1001' AND g.dept_name = 'Cabang KPO' AND f.post_name = 'Customer Service'
+                                  ORDER BY RAND()
+                                  LIMIT 500\
+
+Time : 16:39:56
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`charge_airtime`,`charge_total`,`ext_owner`,`user`,`post`,
+                     ' at line 4
+Raw SQL : INSERT INTO  `data_transaction` (`checksum`,`pabx_id`,`pabx_type`, `pabx_site`, `date_time`,
+                                                                  `duration`, `tac`, `trunk_no`, `extension_no`,`dest_no`,
+                                                                  `pin_user`,`call_type`,`dest_opr`,`dest_city`,`charge_pulse`
+                                                                  `charge_airtime`,`charge_total`,`ext_owner`,`user`,`post`,
+                                                                  `dept`,`cust_name`,`status`)
+                                      VALUES('', '1012', 'AVAYA S87XX', 'NISP Casablanca  Jkt',
+                                                  '2016-03-20 00:00:00', 27, 0, 0, 01708,
+                                                  53316047223638, 071248, 5, 'Ceria',
+                                                  'unknown', 6969, 0, 6969, 'unknown', 'Alexius Gunawan',
+                                                  'Treasury  501', 'Kantor Pusat', 'unknown', 0
+                                                )
+
+Time : 16:39:27
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`charge_airtime`,`charge_total`,`ext_owner`,`user`,`post`,
+                     ' at line 4
+Raw SQL : INSERT INTO  `data_transaction` (`checksum`,`pabx_id`,`pabx_type`, `pabx_site`, `date_time`,
+                                                                  `duration`, `tac`, `trunk_no`, `extension_no`,`dest_no`,
+                                                                  `pin_user`,`call_type`,`dest_opr`,`dest_city`,`charge_pulse`,
+                                                                  `charge_airtime`,`charge_total`,`ext_owner`,`user`,`post`,
+                                                                  `dept`,`cust_name`,`status`)
+                                      VALUES('', '5040', 'AVAYA R6', 'OCBC NISP Juanda - Bogor',
+                                                  '2016-03-20 00:00:00', 53, 0, 0, 244,
+                                                  811484051634634, 12345, 3, 'Axis',
+                                                  'unknown', 57521, 0, 57521, 'unknown', 'Valas ( Ext 244 )',
+                                                  'Lain - Lain', 'Lain-Lain', 'unknown', 0
+                                                )
+
+Time : 16:38:47
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`duration`, `tac`, `trunk_no`, `extension_no`,`dest_no`,
+                       ' at line 2
+Raw SQL : INSERT INTO  `data_transaction` (`checksum`,`pabx_id`,`pabx_type`, `pabx_site`, `date_time`
+                                                                  `duration`, `tac`, `trunk_no`, `extension_no`,`dest_no`,
+                                                                  `pin_user`,`call_type`,`dest_opr`,`dest_city`,`charge_pulse`
+                                                                  `charge_airtime`,`charge_total`,`ext_owner`,`user`,`post`,
+                                                                  `dept`,`cust_name`,`status`)
+                                      VALUES('', '1003', 'AVAYA R11', 'NISP Sarabaya',
+                                                  '2016-03-20 00:00:00', 21, 0, 0, 271,
+                                                  554354916156039, 12345, 6, 'LOCAL',
+                                                  'unknown', 27136, 0, 27136, 'unknown', 'Forex1',
+                                                  'Forex', 'Regional 3 Sby', 'unknown', 0
+                                                )
+
+Time : 16:34:39
+SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Raw SQL : INSERT INTO  `data_transaction`
+                                      VALUES('', '1062', 'AVAYA R6', 'NISP Semarang',
+                                                  '2016-04-20 00:00:00', 5, 0, 0, 103,
+                                                  113874157491971, 365940, 4, 'LOCAL',
+                                                  'unknown', 49355, 0, 49355, 'unknown', 'Yessica Indriani Wibowo',
+                                                  'CS', 'Cabang', 'unknown', 0
+                                                )
+
+Time : 16:32:51
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 5, 'TollFree',
+                                                  'unknown', 387' at line 4
+Raw SQL : INSERT INTO  `data_transaction`
+                                      VALUES('', '1012', 'AVAYA S87XX', 'NISP Casablanca  Jkt',
+                                                  '2016-03-20 00:00:00', 88, 0, 0, 09501,
+                                                  882500337345363, , 5, 'TollFree',
+                                                  'unknown', 38723, 0, 38723, 'unknown', 'Tetty Julita',
+                                                  'Sekdir', 'Kantor Pusat', 'unknown', 0
+                                                )
+
+Time : 16:26:53
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 7, 'LOCAL',
+                                                  'unknown', 55318,' at line 4
+Raw SQL : INSERT INTO  `data_transaction`
+                                      VALUES('', '1012', 'AVAYA S87XX', 'NISP Casablanca  Jkt',
+                                                  '2016-03-20 00:00:00', 47, 0, 0, 44080,
+                                                  214861222419022, , 7, 'LOCAL',
+                                                  'unknown', 55318, 0, 55318, 'unknown', 'Parwati',
+                                                  'Direktur / Ass Direktur', 'Kantor Pusat', 'unknown', 0
+                                                )
+
+Time : 16:22:01
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' 3, 'LOCAL',
+                                                  'unknown', 8800, ' at line 4
+Raw SQL : INSERT INTO  `data_transaction`
+                                      VALUES('', '5040', 'AVAYA R6', 'OCBC NISP Juanda - Bogor',
+                                                  '2016-03-20 00:00:00', 96, 0, 0, 243,
+                                                  985678147218065, , 3, 'LOCAL',
+                                                  'unknown', 8800, 0, 8800, 'unknown', 'Valas ( Ext 243 )',
+                                                  'Lain - Lain', 'Lain-Lain', 'unknown', 0
+                                                )
+
+Time : 13:28:58
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
